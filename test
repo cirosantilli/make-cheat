@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+ext='.mk'
+
+for t in *"$ext"; do
+  if ! make -f "$t"; then
+    echo "ASSERT FAILED: $t"
+    exit 1
+  fi
+done
+
+echo 'ALL ASSERTS PASSED'
