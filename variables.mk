@@ -127,13 +127,18 @@ endef
 
     ## MAKEFLAGS
 
-        # Flags given at invocation.
+        # Flags given at invocation, e.g. `make A=b`.
 
     ## MAKELEVEL
 
         # recursion level of make (how many makes called other makes)
 
         # starts at 0
+
+    ## MAKEFILES
+
+        # Input environment variable:
+        # https://www.gnu.org/software/make/manual/html_node/MAKEFILES-Variable.html
 
     ## SHELL
 
