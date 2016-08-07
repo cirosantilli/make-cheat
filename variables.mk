@@ -92,19 +92,6 @@
 
     rule := varrule: all
 
-## multiline variable
-
-    # Create a multiline variable.
-
-    # TODO why does it not work? I copied from the manual!
-
-    multiline_inner := multiline_2
-
-define multiline =
-@echo multiline_1
-@echo $(multiline_inner)
-endef
-
 ## Predefined variables
 
     # Variables that are automatically set, either at startup of MAKE or inside of rules
@@ -177,8 +164,7 @@ all:
 	@[ '$(question_var_defer)' = 'b' ]
 	@# You can use variables inside variables: varname2 -> avarname -> avarname:
 	@[ '$($(varname2))' = 'avarname' ]
-	@# @if [ ! "$(multiline)"           = $$'1\n2'          ]; then exit 1; fi
-	@# @if [ ! "$(vardef_name)"     = "vardef_val"      ]; then exit 1; fi
+	@# if [ ! "$(vardef_name)" = "vardef_val" ]; then exit 1; fi
 	$(multiline)
 	@echo 'CURDIR       = $(CURDIR)'
 	@echo 'MAKE         = $(MAKE)'

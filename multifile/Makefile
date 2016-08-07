@@ -26,7 +26,7 @@ all:
 
 	# https://www.gnu.org/software/make/manual/html_node/MAKE-Variable.html#MAKE-Variable
 
-	#  Standard way to call on different directory:
+	# Standard way to call on different directory:
 
 		$(MAKE) -C d
 
