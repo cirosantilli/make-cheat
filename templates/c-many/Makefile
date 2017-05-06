@@ -26,6 +26,9 @@ clean:
 run: all
 	./'$(RUN)$(OUT_EXT)'
 
+run-%: %$(OUT_EXT)
+	./'$<'
+
 # If a `test` script exists, use it.
 # Otherwise, run a default test script which checks if all programs exit 0.
 test: all
